@@ -33,6 +33,12 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGO_URI, { useMongoClient: true })
+  .then(() => console.log('Successfully connected to mongodb'))
+  .catch(e => console.error(e));
+
+
 app.use('/', routes);
 app.use('/users', users);
 
