@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const nodemon = require('gulp-nodemon');
-const plumber = require('gulp-plumber');
+// const plumber = require('gulp-plumber');
 const livereload = require('gulp-livereload');
 
 
@@ -9,7 +9,7 @@ gulp.task('develop', () => {
   nodemon({
     script: 'bin/www',
     ext: 'js ejs coffee',
-    stdout: false
+    stdout: false,
   }).on('readable', function () {
     this.stdout.on('data', (chunk) => {
       if (/^Express server listening on port/.test(chunk)) {
@@ -22,5 +22,5 @@ gulp.task('develop', () => {
 });
 
 gulp.task('default', [
-  'develop'
+  'develop',
 ]);
