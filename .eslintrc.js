@@ -11,4 +11,3 @@ module.exports = {
     'global-require': 0,
     'no-param-reassign': 0,
   },
-};

@@ -1,10 +1,9 @@
 {
   "generator-express": {
     "promptValues": {
-      "type": "MVC",
+      "type": "Basic",
       "viewEngine": "EJS",
       "cssPreprocessor": "None",
-      "database": "MongoDB",
       "buildTool": "Gulp"
     }
   }
