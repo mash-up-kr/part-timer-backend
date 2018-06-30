@@ -3,8 +3,8 @@ const User = require('../../models/user');
 
 router.get('/user', (req, res) => {
   User.findOneByUserId(1)
-    .then(user => res.status(200).json(user))
-    .catch(() => {});
+    .then(user => res.json(user))
+    .catch(err => res.send(err));
 });
 
 module.exports = router;

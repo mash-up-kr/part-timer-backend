@@ -9,4 +9,4 @@ userSchema.statics.findOneByUserId = function find(id) {
   return this.findOne({ id });
 };
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('user', userSchema);
